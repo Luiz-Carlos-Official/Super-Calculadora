@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Avançada</title>
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="desktop.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Calculadora Avançada</h1>
+            <p>Insira dois números (aceita negativos e decimais, use vírgula ou ponto).</p>
+        </header>
+
+        <!-- Inputs -->
+        <section id="inputs">
+            <label for="num1">Número A</label>
+            <input type="text" id="num1" placeholder="-12,5">
+
+            <label for="num2">Número B</label>
+            <input type="text" id="num2" placeholder="3,14">
+        </section>
+
+        <!-- Operações -->
+        <section class="buttons">
+            <button onclick="somar()">Adição (+)</button>
+            <button onclick="subtrair()">Subtração (-)</button>
+            <button onclick="multiplicar()">Multiplicação (×)</button>
+            <button onclick="dividir()">Divisão (÷)</button>
+
+            <button onclick="potencia()">Potência (A^B)</button>
+            <button onclick="raiz()">Raiz (√A)</button>
+            <button onclick="fatorial()">Fatorial (A!)</button>
+
+            <button onclick="mdc()">MDC (A,B)</button>
+            <button onclick="mmc()">MMC (A,B)</button>
+            <button onclick="porcentagem()">A% de B</button>
+            <button onclick="trocar()">Trocar (A ↔ B)</button>
+            <button onclick="fatorarPrimos()">Fatoração em primos (A)</button>
+
+            <button onclick="copiarResultado()">Copiar Resultado</button>
+        </section>
+
+        <!-- Resultado e histórico -->
+        <section id="result">
+            <h2>Resultado</h2>
+            <div id="res">—</div>
+
+            <h2>Histórico de Operações</h2>
+            <ul id="historico"></ul>
+            <button onclick="limparHistorico()">Limpar Histórico</button>
+        </section>
+    </main>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
